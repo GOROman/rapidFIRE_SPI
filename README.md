@@ -32,7 +32,7 @@ Connect CS1, CS2, CS3, and GND to your microcontroller.
 
 Bottom View
 
-
+![PinAssign](/docs/images/rapidFIRE_SPI_PinAssign.jpg) 
 
 ## See also
 
