@@ -1,9 +1,13 @@
+// This is a sample implementation of rapidFIRE SPI.
+// It is intended for use with M5Stack Core.
+
 #include <M5Stack.h>
 #include <rapidFIRE_SPI.h>
 
-// GPIO
+// GPIO Pin assign
 //#define SPI_PIN_CLK 16  // Port.C RXD(Y) --> rapidFIRE Pin.1(CS3 CLK)
 //#define SPI_PIN_DATA 17 // Port.C TXD(W) --> rapidFIRE Pin.2(CS2 DATA)
+
 #define SPI_PIN_CLK 22 // Port.A (Y)      --> rapidFIRE Pin.1(CS3 CLK)
 #define SPI_PIN_DATA 21 // Port.A (W)      --> rapidFIRE Pin.2(CS2 DATA)
 #define SPI_PIN_SS 26   // Port.B          --> rapidFIRE Pin.3(CS1 NSS)
@@ -64,9 +68,9 @@ void loop()
         rapidfire.getFirmwareVersion(&ver);
         Serial.printf("rapidFIRE: Ver %d.%d.%d\n", ver.oled[0], ver.oled[1], ver.oled[2]);
     }
+    delay(500);
 
     // Query RSSI.
-    delay(500);
     {
         QUERY_RSSI rssi;
 

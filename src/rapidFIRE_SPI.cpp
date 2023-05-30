@@ -70,24 +70,14 @@ RF_RESULT rapidFIRE_SPI::recvCommand(uint8_t *data, size_t len)
     spi->setDataMode(SPI_MODE0);
     spi->setBitOrder(MSBFIRST);
     spi->setHwCs(true);
-#if 0
+
     recv_len = spi->transfer(0);
     recv_sum = spi->transfer(0);
     for (int i = 0; i < len; i++)
     {
         data[i] = spi->transfer(0);
     }
-#else
-    byte buffer[256] = {0};
-    byte buffer2[256] = {0};
-    memset(buffer2, 0x00, 256);
-    spi->transferBytes(buffer2, buffer, 2 + len);
-    recv_len = buffer[0];
-    recv_sum = buffer[1];
-    for ( int i=0;i<len;++i) {
-        data[i] = buffer[2+i];
-    }
-#endif
+
     spi->end();
     spi->setHwCs(false);
 

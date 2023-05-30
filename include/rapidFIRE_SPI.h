@@ -32,6 +32,9 @@ enum
     RF_RESULT_ERROR = -1,
     RF_RESULT_ERROR_CHECKSUM_MISSMATCH = -2,
 };
+
+class SPIClass;
+
 class rapidFIRE_SPI
 {
     int SPI_pin_SCK = -1;
@@ -85,7 +88,7 @@ private:
     RF_RESULT sendCommand(uint16_t command, byte *data = NULL, size_t len = 0);
 
 public:
-    rapidFIRE_SPI(int pin_SCK, int pin_DATA, int pin_SS, int freq = 40000);
+    rapidFIRE_SPI(int pin_SCK, int pin_DATA, int pin_SS, int freq = 60000);
     ~rapidFIRE_SPI();
 
     RF_RESULT begin();
