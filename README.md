@@ -12,6 +12,8 @@ This library provides SPI control for the IRC rapidFIRE receiver. You can perfor
 - LAP or Time Viewer(using UserText OSD)
 - Custom Buzzer
 
+![Sample](/docs/images/rapidFIRE_SPI_Sample.jpg) 
+
 ## Pin Map
 
 Connect CS1, CS2, CS3, and GND to your microcontroller.
@@ -27,11 +29,13 @@ Connect CS1, CS2, CS3, and GND to your microcontroller.
 | Gnd         | 7 |
 | Gnd         | 8 |
 | +5V         | 9 |
+
 Bottom View
 
 
 
 ## See also
 
-**rapidFIRE 5.8GHz Goggle Module**: [Click Here](https://www.immersionrc.com/fpv-products/rapidfire/)
-**rapidFIRE SPI Mode API Documentation**: [Click Here](https://www.immersionrc.com/?download=5995)
+- rapidFIRE 5.8GHz Goggle Module: [Click Here](https://www.immersionrc.com/fpv-products/rapidfire/)
+
+- rapidFIRE SPI Mode API Documentation: [Click Here](https://www.immersionrc.com/?download=5995)
